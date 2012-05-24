@@ -104,8 +104,7 @@
 				65C767C2154B88CB00D2BB26 /* ViewController_iPad.xib */,
 				65C767B1154B88CB00D2BB26 /* Supporting Files */,
 			);
-			name = drawingkit;
-			path = testpath;
+			path = drawingkit;
 			sourceTree = "<group>";
 		};
 		65C767B1154B88CB00D2BB26 /* Supporting Files */ = {
@@ -136,7 +135,7 @@
 			dependencies = (
 			);
 			name = drawingkit;
-			productName = testpath;
+			productName = drawingkit;
 			productReference = 65C767A6154B88CB00D2BB26 /* drawingkit.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -274,8 +273,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "testpath/drawingkit-Prefix.pch";
-				INFOPLIST_FILE = "testpath/drawingkit-Info.plist";
+				GCC_PREFIX_HEADER = "drawingkit/drawingkit-Prefix.pch";
+				INFOPLIST_FILE = "drawingkit/drawingkit-Info.plist";
 				PRODUCT_NAME = drawingkit;
 				WRAPPER_EXTENSION = app;
 			};
@@ -285,8 +284,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "testpath/drawingkit-Prefix.pch";
-				INFOPLIST_FILE = "testpath/drawingkit-Info.plist";
+				GCC_PREFIX_HEADER = "drawingkit/drawingkit-Prefix.pch";
+				INFOPLIST_FILE = "drawingkit/drawingkit-Info.plist";
 				PRODUCT_NAME = drawingkit;
 				WRAPPER_EXTENSION = app;
 			};
