@@ -2,4 +2,4 @@
 
 A vector drawing toolkit for ios. 
 
-![](drawingkit.png)
+![](https://github.com/fupeng/drawingkit/raw/master/drawingkit.png)
