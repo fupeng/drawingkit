@@ -1,42 +1,36 @@
 //
-//  Shape.h
-//  graphPaper
+//  FaceDraw.h
+//  testpath
 //
-//  Created by James Randall on 13/10/2010.
-//  Copyright 2010 Accidental Fish. All rights reserved.
+//  Created by Peng Fu on 12-4-28.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
-#import "Color.h"
-#import "GraphPaperLocation.h"
-
-@class GraphPaper;
-@class Color;
 
 @interface Shape : NSObject {
-	GraphPaper *_graphPaper;
-	NSMutableArray* _points;
-	Color* _strokeColor;
-	CGFloat _strokeWidth;
+    
+@public    
+    int type;
+    CGPoint points[10];
+    bool isSelected;
+    int selPoint;
+    NSString *title;
+    UIBezierPath *path;
+    UIFont *font;
+    NSMutableArray *dots;
 }
-
-@property (retain) GraphPaper *graphPaper;
-@property (retain) NSMutableArray *points;
-@property (retain) Color* strokeColor;
-@property (assign) CGFloat strokeWidth;
-@property (readonly) CGRect bounds;
-
-- (id)initWithGraphPaper:(GraphPaper*)graphPaper points:(NSArray*)points strokeColor:(Color*)strokeColor strokeWidth:(CGFloat)strokeWidth;
-- (id)initWithCoder:(NSCoder*)coder;
-- (void)encodeWithCoder:(NSCoder*)coder;
-
-- (void)pathInContext:(CGContextRef)context;
++ (Shape*)shapeWithArray:(NSArray *)array;
++ (Shape*)shapeWithString:(NSString *)text CGPoint:(CGPoint)point;
++ (Shape*)shapeWithCGPoint:(CGPoint)p1 p2:(CGPoint)p2;
++ (Shape*)shapeWithCGPoint:(CGPoint)p1 p2:(CGPoint)p2 p3:(CGPoint)p3;
 - (void)drawInContext:(CGContextRef)context;
 - (BOOL)containsViewPoint:(CGPoint)point;
-- (void)transformWithX:(int)x y:(int)y;
-- (NSString*)objectiveCWithScale:(CGFloat)scale transform:(CGPoint)transform;
-- (NSString*)htmlWithScale:(CGFloat)scale transform:(CGPoint)transform;
 
+- (void)transformWithScale:(CGFloat)scale point1:(CGPoint)point1 point2:(CGPoint)point2;
+- (void)transformWithX:(int)x y:(int)y;
+- (void) select:(CGPoint)point;
+- (void) deselect;
 @end

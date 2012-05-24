@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "FaceDraw.h"
+@interface ViewController : UIViewController <UIScrollViewDelegate>{
+    FaceDraw *drawView;
+}
+@property (nonatomic,strong) FaceDraw *drawView;
 
 @end

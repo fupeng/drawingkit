@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DrawView.h"
+#import "Shape.h"
 
-@interface DDD : UIView
+@interface DDD : UIView{
+    UIImageView *imageView;
+    DrawView *drawView;
+    NSMutableArray *shapes;
+    
+    Shape *currentShape;
+    CGPoint oldDragLocation;
+}
 
 @end

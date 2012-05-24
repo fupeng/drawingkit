@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FaceDraw : UIView
+#import "Shape.h"
+#import "DrawView.h"
 
+@interface FaceDraw : UIView <UIGestureRecognizerDelegate>{
+    Shape *currentShape;
+    UIImageView *imageView;
+    DrawView *drawView;
+}
+@property (strong,nonatomic) NSMutableArray *shapes;
+@property (strong,nonatomic) UIImageView *imageView;
+
+- (void)setImage:(UIImage *)newImage;
 @end
